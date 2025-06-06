@@ -26,9 +26,11 @@ const TechnologyScene = () => {
     const endX = -DISTANCE;
 
     const animateCloud = (
-      cloudRef: React.RefObject<THREE.Group>,
+      cloudRef: React.RefObject<THREE.Group | null>,
       delay = 0
     ) => {
+      if (!cloudRef.current) return; // bezpečnostná kontrola
+
       const tl = gsap.timeline({ repeat: -1, delay });
 
       tl.set(cloudRef.current!.position, { x: startX, y: 2, z: 0 });
