@@ -55,7 +55,7 @@ const Hero = () => {
               height={500}
             /> */}
             <div className="flex flex-col mt-68">
-              <h1 className="text-7xl font-bold text-black z-20 ml-4">
+              <h1 className="text-3xl md:text-7xl font-bold text-black z-20 ml-4">
                 Sustainable
               </h1>
               <h1 className="text-7xl font-bold text-black z-20 ml-4 -mt-4">

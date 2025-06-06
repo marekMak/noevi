@@ -11,7 +11,7 @@ const page = () => {
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 px-10 md:px-20 lg:px-40 pt-10">
         <Story />
-        <div className="w-full h-[60vh] lg:h-fit py-5 px-4 md:px-0 relative">
+        <div className="w-full h-[60vh] lg:h-fit py-5 px-4 md:px-0 relative hidden lg:block">
           <h2 className="text-6xl font-semibold text-greeno">We power</h2>
           <div className="absolute cursor-pointer top-4 md:top-0 left-4 md:left-10 w-[60vh] h-[60vh] z-10 hover:z-50 duration-300">
             <video
@@ -50,7 +50,7 @@ const page = () => {
       </div>
       <div className="px-10 md:px-20 w-full h-fit lg:px-40 py-20 flex flex-col items-center justify-center">
         <img src="/noeviText.svg" className="h-40" alt="Noevi green text" />
-        <h2 className="text-2xl font-semibold text-greeno">
+        <h2 className="text-2xl font-semibold text-greeno text-center md:text-left">
           isn’t just an energy company — we’re a movement for a cleaner,
           conscious future.
         </h2>

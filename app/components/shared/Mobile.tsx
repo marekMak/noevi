@@ -8,7 +8,7 @@ type MobileProps = {
 const Mobile = ({ open }: MobileProps) => {
   return (
     <div
-      className={`h-screen w-80 bg-greeno shadow-2xl absolute top-0 right-0 z-40 transition-transform duration-300 ${
+      className={`h-screen w-80 bg-greeno z-[1900] shadow-2xl absolute top-0 right-0 z-40 transition-transform duration-300 ${
         open ? "translate-x-0" : "translate-x-full"
       }`}
     >

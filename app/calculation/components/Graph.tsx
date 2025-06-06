@@ -27,7 +27,7 @@ const Graph = () => {
     <div className="px-4 md:px-20 mx-auto space-y-4 flex flex-col items-start justify-start mt-4">
       <h2 className="text-2xl font-bold text-greeno">Graphic information</h2>
       <div className="w-full min-h-60">
-        <LineChart width={500} height={300} data={data}>
+        <LineChart width={300} height={300} data={data}>
           <XAxis dataKey="month" />
           <YAxis unit="kWh" />
           <CartesianGrid stroke="#eee" strokeDasharray="5 5" />

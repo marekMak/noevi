@@ -3,8 +3,10 @@ import React from "react";
 const Story = () => {
   return (
     <div className="flex flex-col gap-8">
-      <h2 className="text-6xl font-semibold text-greeno">Our story</h2>
-      <div className="flex flex-col gap-4">
+      <h2 className="text-6xl font-semibold text-greeno  text-center md:text-left">
+        Our story
+      </h2>
+      <div className="flex flex-col gap-4 item">
         <p className="font-light text-justify">
           In the scenic Austrian town of Hainburg an der Donau, where the wind
           flows freely between the Danube and the rolling hills,{" "}
@@ -32,8 +34,10 @@ const Story = () => {
           it.
         </p>
       </div>
-      <h2 className="text-6xl font-semibold text-greeno">What We Stand For</h2>
-      <ul className="font-light text-justify ml-4 space-y-2">
+      <h2 className="text-6xl font-semibold text-greeno  text-center md:text-left">
+        What We Stand For
+      </h2>
+      <ul className="font-light text-sm md:text text-justify ml-4 space-y-2">
         <li className="flex items-center gap-2">
           <img src="/check.svg" alt="check icon" className="w-6 h-6" />
           <span className="text-greeno font-semibold">Sustainability </span>

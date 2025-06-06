@@ -34,7 +34,7 @@ const Burger = ({ handleOpen }: BurgerProps) => {
           return newState;
         });
       }}
-      className="flex flex-col gap-1 cursor-pointer z-50 absolute lg:hidden top-9 right-10"
+      className="flex flex-col gap-1 cursor-pointer z-50 absolute lg:hidden top-9 right-10 z-[2000]"
     >
       <div
         ref={bar1}

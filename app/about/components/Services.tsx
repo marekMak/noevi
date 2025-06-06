@@ -36,13 +36,10 @@ const Services = () => {
 
   return (
     <section
-      className="w-full pb-20 px-10 md:px-40 text-white py-20"
+      className="w-full pb-20 px-10 md:px-40 text-white py-20 bg-cover bg-center bg-[#00aa55] 
+             bg-scroll lg:bg-fixed"
       style={{
         backgroundImage: 'url("/cloud.jpg")',
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundAttachment: "fixed",
-        backgroundColor: "#00aa55",
       }}
     >
       <div className="max-w-7xl mx-auto">

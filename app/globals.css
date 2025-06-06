@@ -65,3 +65,7 @@ body {
   --color-greeno: #6cbe45;
   --color-purple: #d33c96;
 }
+
+body {
+  overflow-x: clip!;
+}

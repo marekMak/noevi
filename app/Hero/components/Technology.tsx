@@ -30,10 +30,10 @@ const Technology = () => {
           width={500}
           height={500}
         />
-        <h2 className="text-4xl font-bold text-white">
+        <h2 className="text-2xl text-center md:text-left md:text-4xl font-bold text-white">
           The best technology at your fingertips
         </h2>
-        <i className="text-white font-4xl">
+        <i className="text-white font-4xl  text-center md:text-left">
           Noevi is the best you can get when it comes to sustainable wind-based
           solutions.
         </i>
