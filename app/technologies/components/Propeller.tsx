@@ -1,5 +1,4 @@
-import { useGSAP } from "@gsap/react";
-import { Center, useGLTF } from "@react-three/drei";
+import { useGLTF } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import { forwardRef, useRef } from "react";
 import { Group } from "three";

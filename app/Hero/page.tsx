@@ -5,10 +5,6 @@ import Header from "../components/shared/header";
 import Technology from "./components/Technology";
 
 import Banner from "./components/Banner";
-import Menu from "../components/shared/header/menu";
-import Navigation from "./components/Navigation";
-import Logo from "../components/shared/logo";
-import Burger from "../components/shared/Burger";
 
 const Hero = () => {
   return (

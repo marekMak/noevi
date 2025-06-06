@@ -2,7 +2,7 @@
 
 import Nav from "../components/shared/nav";
 import { Canvas } from "@react-three/fiber";
-import { View, Loader } from "@react-three/drei";
+import { Loader } from "@react-three/drei";
 import clsx from "clsx";
 import TechnologyScene from "./components/TechnologyScene";
 import { Suspense } from "react";

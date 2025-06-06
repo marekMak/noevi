@@ -1,14 +1,6 @@
 "use client";
-import { useState } from "react";
-import {
-  LineChart,
-  Line,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Tooltip,
-  ResponsiveContainer,
-} from "recharts";
+
+import { LineChart, Line, XAxis, YAxis, CartesianGrid } from "recharts";
 
 const Graph = () => {
   const months = [

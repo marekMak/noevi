@@ -1,7 +1,7 @@
 "use client";
 import { Cloud, Clouds, Environment } from "@react-three/drei";
 import Propeller from "./Propeller";
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import ScrollTrigger from "gsap/ScrollTrigger";

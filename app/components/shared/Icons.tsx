@@ -1,5 +1,3 @@
-import { Facebook } from "lucide-react";
-
 const Icons = () => {
   return (
     <div className="flex gap-2">
