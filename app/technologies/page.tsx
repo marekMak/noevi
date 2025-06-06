@@ -58,7 +58,7 @@ const Page = () => {
             {texts.map((text, index) => (
               <div
                 key={index}
-                className="alternating-section grid h-screen place-items-center gap-x-12 md:grid-cols-2"
+                className="alternating-section grid h-[40vh] lg:h-screen z-[800] place-items-center gap-x-12 md:grid-cols-2"
               >
                 <div
                   className={clsx(
@@ -66,10 +66,10 @@ const Page = () => {
                     "rounded-lg p-4 backdrop-blur-lg max-md:bg-white/30"
                   )}
                 >
-                  <h2 className="text-balance text-5xl font-bold">
+                  <h2 className="text-balance text-3xl lg:text-5xl font-bold">
                     {text.title}
                   </h2>
-                  <div className="mt-4 text-xl  text-justify text-white">
+                  <div className="mt-4 text-sm lg:text-xl  text-justify text-white">
                     {text.desc}
                   </div>
                 </div>

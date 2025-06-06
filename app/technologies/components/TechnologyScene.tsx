@@ -67,8 +67,8 @@ const TechnologyScene = () => {
       </group>
 
       <Clouds ref={clouds}>
-        <Cloud ref={cloud1} bounds={[10, 10, 2]} />
-        <Cloud ref={cloud2} bounds={[10, 10, 2]} />
+        <Cloud ref={cloud1} bounds={[0, 10, 2]} />
+        <Cloud ref={cloud2} bounds={[2, 10, 2]} />
       </Clouds>
     </>
   );
