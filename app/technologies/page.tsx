@@ -11,7 +11,7 @@ const Page = () => {
   const texts = [
     {
       title: "Noevi One – Wind Technology of the Future",
-      desc: "Noevi One is engineered for efficient power generation even in low to medium wind conditions. Its three-blade rotor, made from carbon composites, spans 18 meters and starts producing energy at just 2.5 m/s. An intelligent yaw drive system ensures optimal orientation toward the wind throughout the day. With a capacity of up to 55 kW, it's ideal for small industrial sites or communities. Designed and built in Hainburg with a focus on sustainability and local sourcing.",
+      desc: "Noevi One is engineered for efficient power generation even in low to medium wind conditions. Its three-blade rotor, made from carbon composites, spans 18 meters and starts producing energy at just 2.5 m/s. An intelligent yaw drive system ensures optimal orientation toward the wind throughout the day. With a capacity of up to 55 kW, it's ideal for small industrial sites or communities.",
     },
     {
       title: "Clean Energy for Everyday Life",
@@ -58,7 +58,7 @@ const Page = () => {
             {texts.map((text, index) => (
               <div
                 key={index}
-                className="alternating-section grid h-[40vh] lg:h-screen z-[800] place-items-center gap-x-12 md:grid-cols-2"
+                className="alternating-section grid h-96 lg:h-screen z-[800] place-items-center gap-x-12 md:grid-cols-2"
               >
                 <div
                   className={clsx(
