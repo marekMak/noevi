@@ -73,5 +73,6 @@ const Propeller = forwardRef<Group>((_, ref) => {
 });
 
 useGLTF.preload("/models/propeller.gltf");
+Propeller.displayName = "Propeller";
 
 export default Propeller;
