@@ -16,23 +16,6 @@ const TechnologyScene = () => {
   const cloud2 = useRef<THREE.Group>(null);
   const clouds = useRef<THREE.Group>(null);
 
-  const angle: number = 75 * (Math.PI / 180);
-
-  const getXPosition = (distance: number) => {
-    return distance * Math.cos(angle);
-  };
-
-  const getYPosition = (distance: number) => {
-    return distance * Math.sin(angle);
-  };
-
-  const getXYPositions = (distance: number) => {
-    return {
-      x: getXPosition(distance),
-      y: getYPosition(-1 * distance),
-    };
-  };
-
   useGSAP(() => {
     if (!clouds.current || !cloud1.current || !cloud2.current) return;
 

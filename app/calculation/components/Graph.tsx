@@ -19,7 +19,7 @@ const Graph = () => {
   ];
 
   const data = months.map((month, index) => {
-    let value = index * 3;
+    const value = index * 3;
 
     return { month, kWh: value };
   });

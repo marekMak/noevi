@@ -7,7 +7,7 @@ const Estimator = () => {
   const [smallAppliances, setSmallAppliances] = useState(5);
   const [electricHeating, setElectricHeating] = useState(false);
   const [heatingMonths, setHeatingMonths] = useState(6);
-  const [pricePerKwh, setPricePerKwh] = useState(0.25);
+  // const [pricePerKwh, setPricePerKwh] = useState(0.25);
 
   const [resultKwh, setResultKwh] = useState<number | null>(null);
   const [resultEur, setResultEur] = useState<number | null>(null);
@@ -25,7 +25,7 @@ const Estimator = () => {
       heatingMonthly;
 
     setResultKwh(Math.round(total));
-    setResultEur(Math.round(total * pricePerKwh * 100) / 100);
+    setResultEur(Math.round(total * 0.25 * 100) / 100);
   };
   return (
     <div className="bg-white p-6 space-y-4">

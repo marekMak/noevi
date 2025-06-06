@@ -5,7 +5,6 @@ import { Group } from "three";
 import * as THREE from "three";
 
 const Propeller = forwardRef<Group>((_, ref) => {
-  const group = useRef<THREE.Group>(null);
   const { nodes, materials } = useGLTF("/models/propeller.gltf") as any;
   const propeller = useRef<THREE.Mesh>(null);
 
