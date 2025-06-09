@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const Technology = () => {
   return (
     <div className="w-full min-h-screen grid grid-cols-1 lg:grid-cols-2">
@@ -37,9 +39,12 @@ const Technology = () => {
           Noevi is the best you can get when it comes to sustainable wind-based
           solutions.
         </i>
-        <button className="border-[1px] border-white text-white delay-150 transition-colors hover:bg-purple hover:border-purple  text-uppercase  text-2xl px-4 py-2 rounded cursor-pointer">
+        <Link
+          href="/technologies"
+          className="border-[1px] border-white text-white delay-150 transition-colors hover:bg-purple hover:border-purple  text-uppercase  text-2xl px-4 py-2 rounded cursor-pointer"
+        >
           Find your solution
-        </button>
+        </Link>
       </div>
     </div>
   );

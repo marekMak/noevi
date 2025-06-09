@@ -13,9 +13,6 @@ const Mobile = ({ open }: MobileProps) => {
       }`}
     >
       <ul className="flex flex-col ml-10 mt-20 space-y-4 font-semibold text-white">
-        <ul className="hover:text-purple hover:font-semibold delay-150 transition-all cursor-pointer">
-          Account
-        </ul>
         <Link
           href="/about"
           className="whitespace-nowrap hover:text-purple hover:font-semibold delay-150 transition-all cursor-pointer"

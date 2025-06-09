@@ -1,44 +1,75 @@
 "use client";
 
-import { LineChart, Line, XAxis, YAxis, CartesianGrid } from "recharts";
+import {
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  ResponsiveContainer,
+} from "recharts";
 
-const Graph = () => {
+interface GraphProps {
+  electricHeating: boolean;
+  heatingMonths: number;
+}
+
+const Graph = ({ electricHeating, heatingMonths }: GraphProps) => {
   const months = [
-    "Jan",
-    "Feb",
-    "Mar",
-    "Apr",
-    "May",
-    "Jun",
-    "Jul",
-    "Aug",
-    "Sep",
-    "Oct",
-    "Nov",
-    "Dec",
+    { name: "Jan", energy: 6 },
+    { name: "Feb", energy: 5 },
+    { name: "Mar", energy: 2 },
+    { name: "Apr", energy: 2 },
+    { name: "May", energy: 2 },
+    { name: "Jun", energy: 1 },
+    { name: "Jul", energy: 1 },
+    { name: "Aug", energy: 1 },
+    { name: "Sep", energy: 4 },
+    { name: "Oct", energy: 5 },
+    { name: "Nov", energy: 5 },
+    { name: "Dec", energy: 6 },
   ];
 
-  const data = months.map((month, index) => {
-    const value = index * 3;
+  const winterMonths = [11, 0, 1, 2];
 
-    return { month, kWh: value };
+  const summerMonths = [5, 6, 7];
+
+  const data = months.map((month, index) => {
+    let weight = 1;
+
+    if (electricHeating) {
+      const heatingMonthsIndices = winterMonths.slice(0, heatingMonths);
+
+      if (heatingMonthsIndices.includes(index)) {
+        weight = 2.5;
+      }
+    } else {
+      if (summerMonths.includes(index)) {
+        weight = 2.5;
+      }
+    }
+
+    return {
+      month: month.name,
+      kWh: Math.round(month.energy * weight),
+    };
   });
+
   return (
-    <div className="px-4 md:px-20 mx-auto space-y-4 flex flex-col items-start justify-start mt-4">
-      <h2 className="text-2xl font-bold text-greeno">Graphic information</h2>
-      <div className="w-full min-h-60">
-        <LineChart width={300} height={300} data={data}>
+    <div className="bg-white p-6">
+      <h2 className="text-2xl font-bold text-greeno -mt-2 mb-6">
+        Estimated Monthly Breakdown
+      </h2>
+      <ResponsiveContainer width="100%" height={300}>
+        <BarChart data={data}>
+          <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="month" />
-          <YAxis unit="kWh" />
-          <CartesianGrid stroke="#eee" strokeDasharray="5 5" />
-          <Line
-            type="monotone"
-            dataKey="kWh"
-            stroke="#6cbe45"
-            strokeWidth={3}
-          />
-        </LineChart>
-      </div>
+          <YAxis />
+          <Tooltip formatter={(value: number) => `${value} kWh`} />
+          <Bar dataKey="kWh" fill="#5cb85c" />
+        </BarChart>
+      </ResponsiveContainer>
     </div>
   );
 };

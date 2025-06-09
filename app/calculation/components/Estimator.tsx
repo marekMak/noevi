@@ -1,15 +1,26 @@
 "use client";
 import { useState } from "react";
 
-const Estimator = () => {
+type EstimatorProps = {
+  resultKwh: number | null;
+  setResultKwh: (val: number) => void;
+  electricHeating: boolean;
+  setElectricHeating: (val: boolean) => void;
+  heatingMonths: number;
+  setHeatingMonths: (val: number) => void;
+};
+
+const Estimator = ({
+  resultKwh,
+  setResultKwh,
+  electricHeating,
+  setElectricHeating,
+  heatingMonths,
+  setHeatingMonths,
+}: EstimatorProps) => {
   const [people, setPeople] = useState(2);
   const [bigAppliances, setBigAppliances] = useState(3);
   const [smallAppliances, setSmallAppliances] = useState(5);
-  const [electricHeating, setElectricHeating] = useState(false);
-  const [heatingMonths, setHeatingMonths] = useState(6);
-  // const [pricePerKwh, setPricePerKwh] = useState(0.25);
-
-  const [resultKwh, setResultKwh] = useState<number | null>(null);
   const [resultEur, setResultEur] = useState<number | null>(null);
 
   const calculateConsumption = () => {
@@ -24,9 +35,11 @@ const Estimator = () => {
       smallAppliancesConsumption +
       heatingMonthly;
 
-    setResultKwh(Math.round(total));
+    const totalRounded = Math.round(total);
+    setResultKwh(totalRounded);
     setResultEur(Math.round(total * 0.25 * 100) / 100);
   };
+
   return (
     <div className="bg-white p-6 space-y-4">
       <h2 className="text-2xl font-bold text-greeno -mt-2">

@@ -16,15 +16,15 @@ const Hero = () => {
         </div>
         <div
           className="w-full flex flex-col py-10 px-4 md:px-10 lg:px-20 relative"
-          // style={{
-          //   backgroundImage: 'url("./back.png")',
-          //   backgroundAttachment: "fixed",
-          //   backgroundRepeat: "no-repeat",
-          //   backgroundSize: "cover",
-          //   backgroundPosition: "center",
-          // }}
+          style={{
+            backgroundImage: 'url("./back.png")',
+            backgroundAttachment: "fixed",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
         >
-          <video
+          {/* <video
             autoPlay
             muted
             loop
@@ -33,7 +33,7 @@ const Hero = () => {
           >
             <source src="/noevi.mp4" type="video/mp4" />
             Your browser does not support the video tag.
-          </video>
+          </video> */}
           <div className="absolute block lg:hidden top-5 left-12">
             <Link href="/" className="cursor-pointer">
               <Image

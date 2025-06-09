@@ -13,12 +13,12 @@ const Nav = () => {
     <div className="w-full min-h-20 flex justify-between items-center py-4 px-10 md:px-20 lg:px-40 bg-white relative overflow-x-clip">
       <WLogo />
       <ul className="hidden lg:flex space-x-6 font-semibold text-greeno  z-[2000]">
-        <Link
+        {/* <Link
           href="/account"
           className="hover:text-black hover:font-semibold delay-150 transition-all cursor-pointer"
         >
           Account
-        </Link>
+        </Link> */}
         <Link
           href="/about"
           className="whitespace-nowrap hover:text-black hover:font-semibold delay-150 transition-all cursor-pointer"
