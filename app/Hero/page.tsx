@@ -9,8 +9,9 @@ import Banner from "./components/Banner";
 const Hero = () => {
   return (
     <div className="flex flex-col w-full min-h-screen">
+      <Header />
       <div className="grid grid-cols-1 lg:grid-cols-[1fr_4fr] min-h-screen">
-        <div className="bg-greeno hidden lg:flex flex-col justify-between items-center z-50  py-10 relative">
+        <div className="bg-greeno hidden lg:flex flex-col justify-between items-center z-50 pb-10 pt-2 relative">
           <Banner />
         </div>
         <div
@@ -33,7 +34,7 @@ const Hero = () => {
             <source src="/noevi.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
-          <div className="absolute block lg:hidden top-10 left-12">
+          <div className="absolute block lg:hidden top-5 left-12">
             <Link href="/" className="cursor-pointer">
               <Image
                 src="/noeviTextGreen.png"
@@ -44,8 +45,6 @@ const Hero = () => {
             </Link>
           </div>
 
-          <Header />
-
           <div className="w-full h-[80vh] flex flex-col justify-center items-start relative gap-2">
             {/* <img
               src="/noeviText.svg"
@@ -55,10 +54,10 @@ const Hero = () => {
               height={500}
             /> */}
             <div className="flex flex-col mt-68">
-              <h1 className="text-3xl md:text-7xl font-bold text-black z-20 ml-4">
+              <h1 className="text-5xl md:text-7xl font-bold text-black z-20 ml-4">
                 Sustainable
               </h1>
-              <h1 className="text-7xl font-bold text-black z-20 ml-4 -mt-4">
+              <h1 className="text-5xl md:text-7xl font-bold text-black z-20 ml-4 -mt-4">
                 tomorrow
               </h1>
             </div>
@@ -68,7 +67,7 @@ const Hero = () => {
             </p>
 
             <div className="absolute top-[80%] -translate-y-1/2 w-[96%] h-28 rounded-lg p-4 backdrop-blur-xl bg-white/20">
-              <div className="absolute -bottom-4 right-20 w-fit uppercase text-white rounded px-4 py-3 h-fit ml-4 flex justify-center items-center bg-greeno cursor-pointer">
+              <div className="absolute -bottom-6 md:-bottom-4 right-20 w-fit uppercase text-white rounded px-4 py-3 h-fit ml-4 flex justify-center items-center bg-greeno cursor-pointer">
                 Read more
               </div>
             </div>

@@ -24,7 +24,7 @@ const Technology = () => {
       </div>
       <div className="w-full order-1 lg:order-2 min-h-screen bg-greeno flex px-10 py-10 flex-col items-center justify-center gap-4">
         <img
-          src="/noeviTextWhite.svg"
+          src="/noeviTextWhite.png"
           alt="noevi logo"
           className=""
           width={500}
